@@ -22,32 +22,27 @@
       </header>
       <main>
         <div class="weather-container">
-          <h1>
-            🌤️
-            <br />
-            Currently 21° in Tokyo
-          </h1>
-          <h2>13° / <strong>23°</strong></h2>
-          <ul>
-            <li>
-              <h3>☀️ Tomorrow</h3>
-              <p>10° / <strong>22°</strong></p>
-            </li>
-            <li>
-              <h3>🌧️ Saturday</h3>
-              <p>5° / <strong>10°</strong></p>
-            </li>
-            <li>
-              <h3>☁️ Sunday</h3>
-              <p>15° / <strong>17°</strong></p>
-            </li>
-          </ul>
-
-          <button>Change city</button>
-
-          <p>Coded by Ana Chicaiza</p>
+          <div>
+            <h1 class="weather-city"></h1>
+            <p class="weather-details">
+              <span class="time"></span>
+              <span class="description"></span>
+              <br />
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong id="wind-speed"></strong>
+            </p>
+          </div>
+          <div class="temperature-container">
+            <div class="icon"></div>
+            <div class="temperature"></div>
+            <div class="unit">°C</div>
+          </div>
         </div>
       </main>
+      <footer>
+        This project was coded by <a href="">Ana Chicaiza</a>, is open-sourced
+        in <a href="">GitHub</a> and hosted on <a href="">Netlify</a>
+      </footer>
     </div>
     <script>
       function changeCity() {
