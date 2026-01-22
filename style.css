@@ -4,6 +4,13 @@ body {
   text-align: center;
 }
 
+.container {
+  display: block;
+  margin: 20px auto;
+  max-width: 800px;
+  border: 1px solid black;
+}
+
 h1 {
   color: #1a64d6;
   font-size: 34px;
