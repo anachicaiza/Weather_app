@@ -1,65 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Weather Application</title>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <form class="search-form" id="search-form">
-          <input
-            type="search"
-            placeholder="Enter a city.."
-            required
-            id="search-form-input"
-            class="search-form-input"
-          />
-          <input type="submit" value="Search" class="search-form-button" />
-        </form>
-      </header>
-      <main>
-        <div class="weather-container">
-          <div>
-            <h1 class="weather-city"></h1>
-            <p class="weather-details">
-              <span class="time"></span>
-              <span class="description"></span>
-              <br />
-              Humidity: <strong id="humidity"></strong>, Wind:
-              <strong id="wind-speed"></strong>
-            </p>
-          </div>
-          <div class="temperature-container">
-            <div class="icon"></div>
-            <div class="temperature"></div>
-            <div class="unit">°C</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Weather Application</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <form class="search-form" id="search-form">
+        <input type="search" placeholder="Enter a city.." required id="search-form-input" class="search-form-input" />
+        <input type="submit" value="Search" class="search-form-button" />
+      </form>
+    </header>
+    <main>
+      <div class="weather-container">
+        <div>
+          <h1 class="weather-city"></h1>
+          <p class="weather-details">
+            <span class="time"></span>
+            <span class="description"></span>
+            <br />
+            Humidity: <strong id="humidity"></strong>, Wind:
+            <strong id="wind-speed"></strong>
+          </p>
+        </div>
+        <div class="temperature-container">
+          <div class="icon"></div>
+          <div class="temperature"></div>
+          <div class="unit">°C</div>
+        </div>
+      </div>
+      <div class="weather-forecast">
+        <div class="forecast-day">
+          <div class="forecast-date"></div>
+          <div class="forecast-temperatures">
+            <div class="forecast-temperature"></div>
+            <div class="forecast-temperature"></div>
           </div>
         </div>
-      </main>
-      <footer>
-        This project was coded by <a href="">Ana Chicaiza</a>, is open-sourced
-        in <a href="">GitHub</a> and hosted on <a href="">Netlify</a>
-      </footer>
-    </div>
-    <script>
-      function changeCity() {
-        let city = prompt("What city do you live in?");
-        let temperature = prompt("What temperature is it?");
-        let heading = document.querySelector("h1");
-        if (temperature < 0) {
-          heading.innerHTML =
-            "☹️<br />Currently " + temperature + "°C in " + city;
-        } else {
-          heading.innerHTML =
-            "😄<br />Currently " + temperature + "°C in " + city;
-        }
+        <div class="forecast-day">
+          <div class="forecast-date"></div>
+          <div class="forecast-temperatures">
+            <div class="forecast-temperature"></div>
+            <div class="forecast-temperature"></div>
+          </div>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-date"></div>
+          <div class="forecast-temperatures">
+            <div class="forecast-temperature"></div>
+            <div class="forecast-temperature"></div>
+          </div>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-date"></div>
+          <div class="forecast-temperatures">
+            <div class="forecast-temperature"></div>
+            <div class="forecast-temperature"></div>
+          </div>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-date"></div>
+          <div class="forecast-temperatures">
+            <div class="forecast-temperature"></div>
+            <div class="forecast-temperature"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      This project was coded by <a href="">Ana Chicaiza</a>, is open-sourced
+      in <a href="">GitHub</a> and hosted on <a href="">Netlify</a>
+    </footer>
+  </div>
+  <script>
+    function changeCity() {
+      let city = prompt("What city do you live in?");
+      let temperature = prompt("What temperature is it?");
+      let heading = document.querySelector("h1");
+      if (temperature < 0) {
+        heading.innerHTML =
+          "☹️<br />Currently " + temperature + "°C in " + city;
+      } else {
+        heading.innerHTML =
+          "😄<br />Currently " + temperature + "°C in " + city;
       }
+    }
 
-      let changeButton = document.querySelector("button");
-      changeButton.addEventListener("click", changeCity);
-    </script>
-  </body>
+    let changeButton = document.querySelector("button");
+    changeButton.addEventListener("click", changeCity);
+  </script>
+</body>
+
 </html>
