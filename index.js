@@ -1,5 +1,4 @@
 function refreshWeather(response) {
-    console.log(response);
     let temperatureElement = document.querySelector("#temperature");
     let temperature = response.data.temperature.current;
 
@@ -58,7 +57,32 @@ function searchSubmit(event) {
     searchCity(inputElement.value);
 }
 
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+    let days = ["Tues", "Wed", "Thu", "Fri", "Sat"];
+    let forecastHtml = "";
+
+    days.forEach(function (day) {
+        forecastHtml =
+            forecast.innerHTML +
+            `
+    <div class="forecast-day">
+            <div class="forecast-date">Wed</div>
+            <div class="forecast-icon"></div>
+            <div class="forecast-temperatures">
+                <div class="forecast-temperature"><strong>18°</strong></div>
+                <div class="forecast-temperature">10°</div>
+            </div>
+    </div> 
+    `;
+
+        forecastElement.innerHTML = forecastHtml;
+    })
+
+}
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchSubmit);
 
 searchCity("London");
+displayForecast();
